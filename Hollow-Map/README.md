@@ -1,12 +1,12 @@
 
-This is a the source code of a program I built to get a better understanding of PE Format, Virtual Addresses and Sections.
+This is the source code of a program I built to get a better understanding of PE Format, Virtual Addresses and Sections.
 You can customize it all the way you want.
 
 The Program contains two modules.
 
-1)Hollow_PE writes all of the contents of the specified process section by section to a new process.
+1)Hollow_PE writes all of the contents of the specified process section by section to the new process.
 
-2)Mirror_PE creates a new section in itself, maps that section to a remote process, writes contents of the local executable to that section, calls the specified function from the local executable
+2)Mirror_PE creates a new section in itself, maps that section to the remote process, writes contents of the local executable to that section, calls the specified function from the local executable.
 
 Unfortunately there are still some things i don't quite understand. There are some processes i could not hollow out or map a section to. Like Hollow_PE module does not work with explorer.exe, but works with processes like cmd.exe, chkdsk.exe etc. On the other hand Mirror_PE module does not work with these processes but works with explorer.exe. The reason is unknown to me so if anyone finds out let me now :)
 
