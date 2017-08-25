@@ -16,3 +16,5 @@ NOTE: I tried to use predefined "ntdef.h" header file but for some weird reason 
 NOTE #2: You can compile it as a 64bit binary for injecting code to 64 bit processes. There would be some changes you'd need to do before you do this. Like changing some structure types in the function parameters, renaming registers etc. I'd love to make the program check for OS architecture, but I am kinda lazy :) So if you want you can implement it yourself.
 
 NOTE #3: There is a simple shellcode(Shellcode.h) and a small function that i included to test the Hollow_PE & Mirror_PE modules, but you can use whatever code you wanna inject
+
+Compiler Options: `/GS /analyze- /W3 /Zc:wchar_t /ZI /Gm /Od /sdl /Fd"Debug\vc141.pdb" /Zc:inline /fp:precise /D "_MBCS" /errorReport:prompt /WX- /Zc:forScope /RTC1 /Gd /Oy- /MDd /Fa"Debug\" /EHsc /nologo /Fo"Debug\" /Fp"Debug\ZomBozo.pch" /diagnostics:classic`
