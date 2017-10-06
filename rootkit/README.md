@@ -17,7 +17,7 @@ SIGNAL 64 -> Unhide the marked pid
 `make clean && make modules`
 
 ### Notes
-The module also has stealth ability. It can hide itself from `procfs` & `sysfs`. But I haven't figured out how to unhide it again
-therefore the stealth ability is disabled by default but you can easily enable it by calling the `module_hide()` function in the `init` routine.
+The module also has stealth ability. It can hide itself from `procfs` & `sysfs`. But after unhiding it again you cannot remove the module.
+Therefore the stealth ability is disabled by default but you can easily enable it by calling the `module_hide()` function in the `init` routine.
 
 The module works on 2.6.x 3.x linux kernels. Tested on `CentOS -> 3.10.0, Debian -> 3.13.0, 3.19.0` (x86_64)
