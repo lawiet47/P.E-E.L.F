@@ -21,3 +21,5 @@ The module also has stealth ability. It can hide itself from `procfs` & `sysfs`.
 Therefore the stealth ability is disabled by default but you can easily enable it by calling the `module_hide()` function in the `init` routine.
 
 The module works on 2.6.x 3.x linux kernels. Tested on `CentOS -> 3.10.0, Debian -> 3.13.0, 3.19.0` (x86_64)
+
+If anyone is able to solve the problem about removing the module let me now :)
