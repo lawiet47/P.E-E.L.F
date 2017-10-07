@@ -36,7 +36,7 @@ to the actual syscall with a fake one pointing to a malicious function(more deta
 
 ![hooked](https://user-images.githubusercontent.com/27059441/31307503-2a109e10-ab6e-11e7-87f3-d5763703d861.png)
 
-This is the state after the rootkit has done it's job.
+This is the state after the rootkit has done its job.
 
 Here is a little demonstration of how rootkit hides files containing specific substring by hooking `getdents syscall` used to view the contents of a directory (In this case the file_signature is “r0r0_” so any file containing this
 substring will be hidden):
