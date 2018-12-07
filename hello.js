@@ -29,6 +29,7 @@ function getprofid(){
             postdata();
         };
     };
-    xhr.open('GET', url, true);xhr.withCredentials = "true";
+    xhr.open('GET', url, true);
+    xhr.withCredentials = "true";
     xhr.send(null);
 }
