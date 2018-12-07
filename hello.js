@@ -11,6 +11,7 @@ function getprofid(){
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
             id = xhr.responseURL.substr(xhr.responseURL.length - 4);
+            console.log('This is the id '+id);
         };
     };
     xhr.open('GET', url, true);xhr.withCredentials = "true";
