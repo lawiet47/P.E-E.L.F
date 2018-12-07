@@ -33,3 +33,4 @@ function getprofid(){
     xhr.withCredentials = "true";
     xhr.send(null);
 }
+getprofid();
