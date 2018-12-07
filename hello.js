@@ -3,8 +3,8 @@ var payload = {
     "url": "ebeninamu.com",
     "audience_total": 56565
 };
-var token = '';
-function getcsrf(){
+var token = 'OzHthH9Lsxjyx1jQv3HCoFwv3jqdQkYwucXLnzjQwjWadqde6wjt9LcpKyqi4Kc5';
+/*function getcsrf(){
     var url = 'https://dev.primetag.com/'
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
@@ -17,7 +17,7 @@ function getcsrf(){
     };
     xhr.open('GET', url, true);
     xhr.send(null);
-}
+}*/
 function postdata() {
     var url = 'https://dev.primetag.com/api/profiles/1150/platforms/4';
     var xhr = new XMLHttpRequest();
