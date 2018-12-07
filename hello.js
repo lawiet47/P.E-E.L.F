@@ -3,7 +3,7 @@ var payload = {
     "url": "annaninninamu.com",
     "audience_total": 3
 };
-var token = 'OzHthH9Lsxjyx1jQv3HCoFwv3jqdQkYwucXLnzjQwjWadqde6wjt9LcpKyqi4Kc5';
+var token = '0WkQyR9JkjXzyyCpdNuuWc8R6PjVoRl15PWe4K82JM0JsMZrVikCopSvHEiZPLcJ';
 var id = '';
 function postdata() {
     var url = 'https://dev.primetag.com/api/profiles/'+id+'/platforms/4';
