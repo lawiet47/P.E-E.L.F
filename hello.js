@@ -32,5 +32,5 @@ function postdata() {
     xhr.withCredentials = "true";
     xhr.send(JSON.stringify(payload));
 };
-getcsrf();
+//getcsrf();
 postdata();
