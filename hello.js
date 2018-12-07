@@ -17,6 +17,7 @@ function getprofid(){
     xhr.send(null);
 }
 function postdata() {
+    getprofid();
     var url = 'https://dev.primetag.com/api/profiles/'+id+'/platforms/4';
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
@@ -30,5 +31,4 @@ function postdata() {
     xhr.withCredentials = "true";
     xhr.send(JSON.stringify(payload));
 };
-getprofid();
 postdata();
