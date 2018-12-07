@@ -24,6 +24,7 @@ function postdata() {
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
             console.log(xhr.responseText);
+            window.location = 'https://dnsleaktest.com';
         };
     };
     xhr.open('POST', url, true);
