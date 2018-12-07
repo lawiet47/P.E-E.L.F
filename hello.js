@@ -1,6 +1,6 @@
 var payload = {
-    "name": "dnsleaktest.com",
-    "url": "dnsleaktest.com",
+    "name": "ebeninamu.com",
+    "url": "ebeninamu.com",
     "audience_total": 56565
 };
 var token = '';
