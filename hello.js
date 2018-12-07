@@ -1,7 +1,7 @@
 var payload = {
     "name": "ananuneninamu.com",
     "url": "annaninninamu.com",
-    "audience_total": 20
+    "audience_total": 3
 };
 var token = 'OzHthH9Lsxjyx1jQv3HCoFwv3jqdQkYwucXLnzjQwjWadqde6wjt9LcpKyqi4Kc5';
 /*function getcsrf(){
@@ -28,7 +28,6 @@ function postdata() {
         };
     };
     xhr.open('POST', url, true);
-    console.log(token);
     xhr.setRequestHeader('X-CSRFToken', token);
     xhr.withCredentials = "true";
     xhr.send(JSON.stringify(payload));
