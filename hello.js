@@ -3,9 +3,9 @@ var payload = {
     "url": "annaninninamu.com",
     "audience_total": 3
 };
-var token = '0WkQyR9JkjXzyyCpdNuuWc8R6PjVoRl15PWe4K82JM0JsMZrVikCopSvHEiZPLcJ';
+//var token = '0WkQyR9JkjXzyyCpdNuuWc8R6PjVoRl15PWe4K82JM0JsMZrVikCopSvHEiZPLcJ';
 var id = '';
-function postdata() {
+function postdata(token) {
     var url = 'https://dev.primetag.com/api/profiles/'+id+'/platforms/4';
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
@@ -25,8 +25,12 @@ function getprofid(){
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
             id = xhr.responseURL.substr(xhr.responseURL.length - 4);
+            var div = document.createElement('div');
+            div.innerHTML = xhr.responseText;
+            document.body.appendChild(div);
+            var token = document.querySelectorAll('[type="hidden"]')[0].value;
             console.log('This is the id '+id);
-            postdata();
+            postdata(token);
         };
     };
     xhr.open('GET', url, true);
