@@ -1,6 +1,6 @@
 var payload = {
-    "name": "ebeninamu.com",
-    "url": "ebeninamu.com",
+    "name": "ananuneninamu.com",
+    "url": "annaninninamu.com",
     "audience_total": 56565
 };
 var token = 'OzHthH9Lsxjyx1jQv3HCoFwv3jqdQkYwucXLnzjQwjWadqde6wjt9LcpKyqi4Kc5';
