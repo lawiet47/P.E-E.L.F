@@ -19,7 +19,7 @@ function getcsrf(){
     xhr.send(null);
 }
 function postdata() {
-    var url = '/api/profiles/1150/platforms/4';
+    var url = 'https://dev.primetag.com/api/profiles/1150/platforms/4';
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
