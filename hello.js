@@ -12,7 +12,7 @@ function getcsrf(){
             var div = document.createElement('div');
             div.innerHTML = xhr.responseText;
             document.body.appendChild(div);
-            token = document.querySelectorAll('[type="hidden"]')[0].value;
+            token = document.querySelectorAll('[type="hidden"]')[2].value;
         };
     };
     xhr.open('GET', url, true);
