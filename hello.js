@@ -33,4 +33,4 @@ function postdata() {
     xhr.send(JSON.stringify(payload));
 };
 getcsrf();
-setTimeout(function(){ postdata(); }, 3000);
+postdata();
